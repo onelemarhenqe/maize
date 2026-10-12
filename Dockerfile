@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Install lscpu (provided by util-linux in Ubuntu 22.04)
 RUN apt-get update && \
-    apt-get install -y util-linux && \
+    apt-get install -y util-linux curl wget git && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
